@@ -20,4 +20,10 @@ constexpr int data_bits_per_byte = 8;
 } // namespace platform
 } // namespace pyc
 
+#ifdef _WIN32
+#define PYC_EXPORT extern "C" __declspec(dllexport)
+#else
+#define PYC_EXPORT extern "C" __attribute__((visibility("default")))
+#endif
+
 #endif // PYC_CORE_COMMON_PLATFORM_HPP

@@ -1167,7 +1167,7 @@ static void idaapi load_pyc_file(linput_t* li, ushort /*neflags*/, const char* f
 // Loader Descriptor Export
 // ============================================================================
 
-extern "C" __attribute__((visibility("default"))) loader_t LDSC = {
+PYC_EXPORT loader_t LDSC = {
     IDP_INTERFACE_VERSION,
     0,                                  // Flags
     pyc::loader::accept_pyc_file,       // accept_file

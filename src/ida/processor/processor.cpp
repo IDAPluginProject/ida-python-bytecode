@@ -837,7 +837,7 @@ static instruc_t Instructions[256];
 // Processor Descriptor Export
 // ============================================================================
 
-extern "C" __attribute__((visibility("default"))) processor_t LPH = {
+PYC_EXPORT processor_t LPH = {
     IDP_INTERFACE_VERSION,              // version
     pyc::PLFM_PYC,                       // id (from core/common/types.hpp)
     PRN_HEX                             // flags
